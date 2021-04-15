@@ -17,7 +17,10 @@ namespace HelloWorld31.Entities
     // Palavra 'as'
     // Palavra 'is'
     // Uso comum: Métodos que recebem parâmetros genéricos (ex: Equals)
-    class SavingsAccount : Account // ':' Sintaxe para a classe 'SavingsAccount' herdar todos os atributos e métodos da classe 'Account' (herança).
+
+    // Sealed: Sela um método classe para que não possa ser herdada por outras classes, usado para previnir alguam regra de negócio no projeto.
+    // Só é possível selar métodos sobrepostos(override). Sobreposições multiplas podem ser uma porta de entrada para inconsistências, por isso é recomendado selar.
+    sealed class SavingsAccount : Account // classe do tipo selada para que não seja possível ter alguma herança do tipo 'SavingsAccount'. // ':' Sintaxe para a classe 'SavingsAccount' herdar todos os atributos e métodos da classe 'Account' (herança).
     {
         public double InterestRate { get; set; }
 
